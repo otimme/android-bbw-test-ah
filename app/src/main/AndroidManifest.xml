@@ -23,6 +23,14 @@
             android:name=".BlueBillyWigVideoActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
+        <activity
+            android:name=".BlueBillyWigVideoActivityFullScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <activity
+            android:name=".BlueBillyWigVideoActivityModal"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

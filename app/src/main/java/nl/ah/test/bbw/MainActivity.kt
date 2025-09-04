@@ -22,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.bluebillywig.bbnativeplayersdk.BBNativePlayer
 import com.bluebillywig.bbnativeplayersdk.BBNativeShorts
 
 class MainActivity : AppCompatActivity() {
@@ -71,6 +72,30 @@ private fun ScreenContent(
             }
         ) {
             Text(text = "Play video")
+        }
+        Button(
+            onClick = {
+                context.startActivity(Intent(context, BlueBillyWigVideoActivityFullScreen::class.java))
+            }
+        ) {
+            Text(text = "Play video Full Screen")
+        }
+        Button(
+            onClick = {
+                context.startActivity(Intent(context, BlueBillyWigVideoActivityModal::class.java))
+            }
+        ) {
+            Text(text = "Play video Modal")
+        }
+        Button(
+            onClick = {
+                val playerView = BBNativePlayer.createModalPlayerView(
+                    activity = context as AppCompatActivity,
+                    jsonUrl = "https://allerhande.bbvms.com/p/home_app_playout_nl/c/6177239.json"
+                )
+            }
+        ) {
+            Text(text = "Play video Modal Directly")
         }
     }
 }
