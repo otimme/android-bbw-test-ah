@@ -40,8 +40,9 @@ android {
 }
 
 dependencies {
+//    implementation(libs.blueBillywigVideoPlayer)
 
-    implementation(libs.blueBillywigVideoPlayer)
+    implementation("com.bluebillywig.bbnativeplayersdk:bbnativeplayersdk:8.33-2-SNAPSHOT")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -82,13 +82,6 @@ private fun ScreenContent(
         }
         Button(
             onClick = {
-                context.startActivity(Intent(context, BlueBillyWigVideoActivityModal::class.java))
-            }
-        ) {
-            Text(text = "Play video Modal")
-        }
-        Button(
-            onClick = {
                 val playerView = BBNativePlayer.createModalPlayerView(
                     activity = context as AppCompatActivity,
                     jsonUrl = "https://allerhande.bbvms.com/p/home_app_playout_nl/c/6177239.json"
